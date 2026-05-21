@@ -1,0 +1,157 @@
+.pos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 650px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Форма ввода */
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.input-box input {
+    border: 2px solid #00000056;
+    border-radius: 8px;
+    padding: 10px;
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-box input:focus {
+    border-color: #2d3247;
+}
+
+.pos-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-progress {
+    width: 45%;
+    background-color: #fff;
+    border: 1px solid #00000079;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s, background-color 0.2s, color 0.2s, border 0.2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-progress:hover {
+    opacity: 0.9;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #ffffff;
+}
+
+.btn-progress:active {
+    transform: scale(0.98);
+}
+
+/* Вывод аналитики */
+.results {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.result-card {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #2d3247;
+}
+
+.result-card .value {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--led-on);
+    margin-top: 5px;
+}
+
+.result-card .label {
+    font-size: 13px;
+}
+
+
+/* Стилизация LED Табло */
+.led-board {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    border: 4px solid #111;
+}
+
+/* Сетка для одной цифры (5 рядов на 3 колонки) */
+.digit {
+    display: grid;
+    grid-template-rows: repeat(5, 8px);
+    grid-template-columns: repeat(3, 8px);
+    gap: 2px;
+}
+
+.digit.dot {
+    grid-template-columns: 8px;
+}
+
+/* Базовый стиль пикселя */
+.pixel {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #222;
+    /* Темно-серый */
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+/* Активный пиксель */
+.pixel.on {
+    background-color: #00ff66;
+    box-shadow: 0 0 6px #00ff66;
+}
+
+.error-msg {
+    color: #ff4a4a;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    display: none;
+}
