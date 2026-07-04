@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивный слайдер изображений</title>
+    <!--Cсылки для шрифта и иконок стрелок -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style/css/all.css">
+</head>
+<body>
+
+    <div class="slider-card">
+        <div class="slider-header">
+            <h1>Моя Галерея</h1>
+        </div>
+
+        <!-- Область вывода фото -->
+            <div class="image-viewport">
+                <img id="slider-image" src="" alt="Фото слайдера">
+                <!-- Счетчик слайдов -->
+                <div class="image-counter" id="slider-counter">Загрузка...</div>
+                <!-- Индикаторы -->
+    <div class="slider-dots" id="slider-dots"></div>
+            </div>
+
+        <!-- Кнопки управления -->
+        <div class="controls-panel">
+            <button class="slider-btn" id="btn-prev">
+                <i class="fa-solid fa-chevron-left"></i> Назад
+            </button>
+            <button class="slider-btn" id="btn-next">
+                Вперед <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+    <script src="./js/slider.js"></script>
+</body>
+</html>

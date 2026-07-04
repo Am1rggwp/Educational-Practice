@@ -1,0 +1,140 @@
+ /*Стилизация интерфейса сладера */
+ .slider-card {
+     background-color: #d8d8d8;
+     border: 0;
+     border-radius: 24px;
+     box-shadow: 0 25px 50px -12px rgba(36, 36, 36, 0.5);
+     padding: 30px;
+     width: 100%;
+     max-width: 800px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+ }
+
+ /* Заголовок карточки */
+ .slider-header {
+     text-align: center;
+     margin-bottom: 5px;
+ }
+
+ .slider-header h1 {
+     font-size: 24px;
+     font-weight: 700;
+     margin: 0 0 8px 0;
+     color: #0a0a0a;
+ }
+
+ /* Область отображения изображения */
+ .image-viewport {
+     position: relative;
+     border-radius: 16px;
+     height: 500px;
+     width: 100%;
+     overflow: hidden;
+     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+     background-color: #0f172a;
+ }
+
+ /* Само изображение */
+ .image-viewport img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: opacity 0.3s ease-in-out;
+ }
+
+ /* Текущий номер изображения (счетчик) */
+ .image-counter {
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     background-color: rgba(15, 23, 42, 0.75);
+     backdrop-filter: blur(8px);
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     padding: 8px 16px;
+     border-radius: 30px;
+     font-size: 14px;
+     font-weight: 600;
+     color: #d6d6d6;
+     letter-spacing: 0.5px;
+ }
+
+ /* Панель управления */
+ .controls-panel {
+     display: flex;
+     justify-content: space-between;
+     gap: 15px;
+ }
+
+ /* Кнопки Назад / Вперед */
+ .slider-btn {
+     background: linear-gradient(135deg, #a8a8a8 0%, #9c9c9c 100%);
+     color: #ffffff;
+     border: none;
+     border-radius: 14px;
+     padding: 15px 30px;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 600;
+     font-size: 16px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     transition: all 0.2s ease;
+     box-shadow: 0 4px 15px rgba(63, 63, 63, 0.3);
+     flex: 1;
+     justify-content: center;
+ }
+
+ /* Эффекты наведения на кнопки */
+ .slider-btn:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 6px 20px rgba(226, 226, 226, 0.726);
+     filter: brightness(1.1);
+ }
+
+ .slider-btn:active {
+     transform: translateY(1px);
+ }
+
+ /* Иконки внутри кнопок */
+ .slider-btn i {
+     font-size: 14px;
+     transition: transform 0.2s ease;
+ }
+
+ #btn-prev:hover i {
+     transform: translateX(-3px);
+ }
+
+ #btn-next:hover i {
+     transform: translateX(3px);
+ }
+ /* Индикаторы */
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background: white;
+}
